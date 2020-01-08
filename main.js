@@ -2,7 +2,16 @@ const container = document.querySelector('div.container');
 
 function changeColor(e) {
     e.target.style.backgroundColor = 'black';
+}
 
+function clearGrid() {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        let child = children[i];
+        if (child.tagName == "DIV") {
+            child.style.backgroundColor = 'white';
+        }
+    }
 }
 
 for (let i = 0; i < 16; i++) {
@@ -14,3 +23,4 @@ for (let i = 0; i < 16; i++) {
     const jump = document.createElement("br");
     container.appendChild(jump);
 }
+
